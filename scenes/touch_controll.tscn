@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://d27gstcnwvt2b"]
+
+[ext_resource type="Texture2D" uid="uid://ceq6ddkumm8p1" path="res://assets/controll_buttons/left.png" id="1_scl04"]
+[ext_resource type="Script" uid="uid://bvxrfg14l0p3m" path="res://scripts/touch_controll.gd" id="1_sl73w"]
+[ext_resource type="Texture2D" uid="uid://cgbliah6irhiy" path="res://assets/controll_buttons/right.png" id="2_sl73w"]
+[ext_resource type="Texture2D" uid="uid://d3d3p145y5hkf" path="res://assets/controll_buttons/jump.png" id="3_d36e5"]
+
+[node name="touch_controll" type="CanvasLayer"]
+script = ExtResource("1_sl73w")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -215.0
+grow_vertical = 0
+
+[node name="left_button" type="TouchScreenButton" parent="HBoxContainer"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(0, 29)
+texture_normal = ExtResource("1_scl04")
+passby_press = true
+action = "left"
+
+[node name="right_button" type="TouchScreenButton" parent="HBoxContainer"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(216, 30)
+texture_normal = ExtResource("2_sl73w")
+action = "right"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -171.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="jump_button" type="TouchScreenButton" parent="HBoxContainer2"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(82, -12)
+texture_normal = ExtResource("3_d36e5")
+action = "jump"
